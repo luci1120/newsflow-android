@@ -1,0 +1,24 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# publish directories (separate git repos, don't nest)
+publish/
+publish_clean/
+publish_repo/
+tools/publish/
+
+# python cache
+__pycache__/
+*.pyc
+
+# build outputs
+lessons_out/
+out/

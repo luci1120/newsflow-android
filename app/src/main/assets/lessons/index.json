@@ -1,0 +1,145 @@
+{
+  "updatedAt": "2026-10-03T13:56:28Z",
+  "count": 10,
+  "keepDays": null,
+  "lessons": [
+    "tX6Om_7V9OM.json",
+    "4EBio7ZtQTU.json",
+    "K7IHbN5MMb8.json",
+    "lbcu9BUmAhk.json",
+    "KsoZVXiqPgE.json",
+    "-Hzuhz0ffoY.json",
+    "JZi_N5elETs.json",
+    "a39RzsEcbdI.json",
+    "yF1rzzxe2vc.json",
+    "S6_Q0fca7ag.json"
+  ],
+  "entries": [
+    {
+      "file": "tX6Om_7V9OM.json",
+      "videoId": "tX6Om_7V9OM",
+      "title": "Why a major theme park is permanently closing this controversial roller coaster",
+      "source": "CNN10",
+      "durationSecs": 607,
+      "publishedAt": "2026-10-01",
+      "segments": 107
+    },
+    {
+      "file": "4EBio7ZtQTU.json",
+      "videoId": "4EBio7ZtQTU",
+      "title": "Crocs sues discount store over lookalike footwear",
+      "source": "CNN10",
+      "durationSecs": 616,
+      "publishedAt": "2026-09-30",
+      "segments": 112
+    },
+    {
+      "file": "K7IHbN5MMb8.json",
+      "videoId": "K7IHbN5MMb8",
+      "title": "The first new species of cat to be discovered in more than 100 years",
+      "source": "CNN10",
+      "durationSecs": 608,
+      "publishedAt": "2026-09-23",
+      "segments": 113
+    },
+    {
+      "file": "lbcu9BUmAhk.json",
+      "videoId": "lbcu9BUmAhk",
+      "title": "New fossil analysis confirms Tyrannosaurus rex was warm-blooded",
+      "source": "CNN10",
+      "durationSecs": 616,
+      "publishedAt": "2026-09-21",
+      "segments": 107
+    },
+    {
+      "file": "KsoZVXiqPgE.json",
+      "videoId": "KsoZVXiqPgE",
+      "title": "Japan has more living 100-year-olds than ever before",
+      "source": "CNN10",
+      "durationSecs": 542,
+      "publishedAt": "2026-09-18",
+      "segments": 97
+    },
+    {
+      "file": "-Hzuhz0ffoY.json",
+      "videoId": "-Hzuhz0ffoY",
+      "title": "G7 nations will release 100 million barrels of oil and diesel to combat high prices",
+      "source": "CBS",
+      "durationSecs": 238,
+      "publishedAt": "2026-10-03",
+      "segments": 46
+    },
+    {
+      "file": "JZi_N5elETs.json",
+      "videoId": "JZi_N5elETs",
+      "title": "How a rare genetic mutation could unlock new ways to treat or prevent dementia",
+      "source": "PBS",
+      "durationSecs": 1602,
+      "publishedAt": "2026-10-03",
+      "segments": 282
+    },
+    {
+      "file": "a39RzsEcbdI.json",
+      "videoId": "a39RzsEcbdI",
+      "title": "How the West is preparing for a drier future as water supplies hit lows",
+      "source": "PBS",
+      "durationSecs": 306,
+      "publishedAt": "2026-10-03",
+      "segments": 60
+    },
+    {
+      "file": "yF1rzzxe2vc.json",
+      "videoId": "yF1rzzxe2vc",
+      "title": "Martina Navratilova on Chris Evert, their rivalry and beating cancer",
+      "source": "PBS",
+      "durationSecs": 519,
+      "publishedAt": "2026-10-03",
+      "segments": 97
+    },
+    {
+      "file": "S6_Q0fca7ag.json",
+      "videoId": "S6_Q0fca7ag",
+      "title": "ABC World News Tonight with David Muir Full Broadcast",
+      "source": "ABC",
+      "durationSecs": 1246,
+      "publishedAt": "2026-10-02",
+      "segments": 209
+    }
+  ],
+  "groups": [
+    {
+      "source": "CNN10",
+      "count": 5,
+      "lessons": [
+        "tX6Om_7V9OM.json",
+        "4EBio7ZtQTU.json",
+        "K7IHbN5MMb8.json",
+        "lbcu9BUmAhk.json",
+        "KsoZVXiqPgE.json"
+      ]
+    },
+    {
+      "source": "CBS",
+      "count": 1,
+      "lessons": [
+        "-Hzuhz0ffoY.json"
+      ]
+    },
+    {
+      "source": "PBS",
+      "count": 3,
+      "lessons": [
+        "JZi_N5elETs.json",
+        "a39RzsEcbdI.json",
+        "yF1rzzxe2vc.json"
+      ]
+    },
+    {
+      "source": "ABC",
+      "count": 1,
+      "lessons": [
+        "S6_Q0fca7ag.json"
+      ]
+    }
+  ]
+}
