@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- NewsFlow 图标前景层：播放三角 + 声波弧线 -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,28 L54,52 L78,40 Z" />
+        android:pathData="M 38.979 36.920 L 31.000 67.064 A 5.000 5.000 0 0 1 38.979 71.080 L 56.588 58.015 A 5.000 5.000 0 0 1 56.588 49.985 L 38.979 36.920 A 5.000 5.000 0 0 1 31.000 40.936 Z"
+        android:fillColor="#FFFFFF" />
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M34,44 L54,80 L74,44 L66,44 L54,68 L42,44 Z" />
+        android:pathData="M 63.736 44.152 A 10.000 10.000 0 0 1 63.736 63.848"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M 65.560 33.811 A 20.500 20.500 0 0 1 65.560 74.189"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round" />
 </vector>

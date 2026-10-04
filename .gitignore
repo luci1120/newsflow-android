@@ -30,3 +30,8 @@ keystore.properties
 *.jks
 *.keystore
 *.pepk
+
+# icon generation scratch files
+icon_preview_*.png
+icon_variants.png
+icon_sizes.png
