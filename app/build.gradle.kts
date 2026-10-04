@@ -142,6 +142,10 @@ dependencies {
     // GDPR/CCPA 同意流程（欧盟/加州用户必须）
     implementation("com.google.android.ump:user-messaging-platform:3.2.0")
 
+    // Google Play 计费（订阅去广告）
+    // 基础库是纯 Java，无 Kotlin 元数据兼容问题
+    implementation("com.android.billingclient:billing:8.3.0")
+
     // Testing
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation(composeBom)

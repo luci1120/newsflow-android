@@ -7,6 +7,7 @@ import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
 import android.webkit.WebView
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
@@ -53,10 +54,14 @@ fun PlayerScreen(
     newsItem: NewsItem,
     targetLang: String,
     onBack: () -> Unit,
+    showAds: Boolean = true,
 ) {
     val context = LocalContext.current
     val speechService = remember { SpeechService(context) }
     val settings = remember { SettingsService(context) }
+
+    // 系统返回键回到列表，而不是退出 App
+    BackHandler { onBack() }
 
     var currentSegIdx by remember { mutableStateOf(0) }
     var playbackSpeed by remember { mutableStateOf(settings.getPlaybackSpeed()) }
@@ -192,8 +197,10 @@ fun PlayerScreen(
             )
         },
         bottomBar = {
-            // AdMob 横幅固定在屏幕底部（加载失败时高度为 0，不留白）
-            BannerAd(adUnitId = AdIds.bannerPlayer)
+            // AdMob 横幅固定在屏幕底部（加载失败时高度为 0，不留白）。会员不显示。
+            if (showAds) {
+                BannerAd(adUnitId = AdIds.bannerPlayer)
+            }
         },
     ) { padding ->
         Column(

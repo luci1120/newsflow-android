@@ -3,15 +3,18 @@ package com.newsflow.app.ui.screens
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.newsflow.app.BuildConfig
 import com.newsflow.app.data.AppLanguages
 import com.newsflow.app.data.SettingsService
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -22,6 +25,9 @@ fun SettingsScreen(
     currentLang: String,
     onLanguageChanged: (String) -> Unit,
     settings: SettingsService,
+    isPremium: Boolean = false,
+    onOpenUpgrade: () -> Unit = {},
+    onDebugSetPremium: (Boolean) -> Unit = {},
 ) {
     var selectedLang by remember { mutableStateOf(currentLang) }
     var speed by remember { mutableStateOf(settings.getPlaybackSpeed()) }
@@ -46,6 +52,58 @@ fun SettingsScreen(
                 .padding(padding)
                 .verticalScroll(rememberScrollState()),
         ) {
+            // ---------- Premium ----------
+            SectionHeader("Premium")
+
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 4.dp),
+                onClick = onOpenUpgrade,
+                shape = RoundedCornerShape(12.dp),
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Icon(
+                        if (isPremium) Icons.Default.CheckCircle else Icons.Default.Block,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                    )
+                    Spacer(Modifier.width(14.dp))
+                    Column(Modifier.weight(1f)) {
+                        Text(
+                            if (isPremium) "Premium — ads removed" else "Remove ads",
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 15.sp,
+                        )
+                        Text(
+                            if (isPremium) "Thank you for supporting NewsFlow"
+                            else "From \$0.99/month · cancel anytime",
+                            fontSize = 12.sp,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    Icon(Icons.Default.ChevronRight, contentDescription = null)
+                }
+            }
+
+            // 调试开关：仅 debug 构建可见，用来验证「会员不显示广告」
+            if (BuildConfig.DEBUG) {
+                SwitchRow(
+                    title = "Debug: simulate Premium",
+                    subtitle = "Debug builds only — hides all ads",
+                    checked = isPremium,
+                    onCheckedChange = onDebugSetPremium,
+                    icon = Icons.Default.BugReport,
+                )
+            }
+
+            Divider()
+
             // ---------- Playback ----------
             SectionHeader("Playback")
 

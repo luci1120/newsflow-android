@@ -28,6 +28,7 @@ fun NewsListScreen(
     news: List<NewsItem>,
     onOpenNews: (NewsItem) -> Unit,
     isLoading: Boolean = false,
+    showAds: Boolean = true,
 ) {
     // Fixed source order: CNN 10 → CBS → PBS → ABC
     val sourceOrder = listOf("CNN10", "CBS", "PBS", "ABC")
@@ -120,8 +121,10 @@ fun NewsListScreen(
                 }
             }
 
-            // AdMob 横幅（加载失败时高度为 0，不留白）
-            BannerAd(adUnitId = AdIds.bannerList)
+            // AdMob 横幅（加载失败时高度为 0，不留白）。会员不显示。
+            if (showAds) {
+                BannerAd(adUnitId = AdIds.bannerList)
+            }
         }
     }
 }
