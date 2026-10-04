@@ -8,6 +8,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+app/build/
 
 # publish directories (separate git repos, don't nest)
 publish/
@@ -22,3 +23,10 @@ __pycache__/
 # build outputs
 lessons_out/
 out/
+
+# === SIGNING KEYS — NEVER COMMIT ===
+keystore/
+keystore.properties
+*.jks
+*.keystore
+*.pepk
