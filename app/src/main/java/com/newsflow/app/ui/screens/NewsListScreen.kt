@@ -18,6 +18,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.newsflow.app.ads.AdIds
+import com.newsflow.app.ads.BannerAd
 import com.newsflow.app.data.NewsItem
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -98,7 +100,8 @@ fun NewsListScreen(
 
             // News list
             LazyColumn(
-                contentPadding = PaddingValues(bottom = 80.dp),
+                modifier = Modifier.weight(1f),
+                contentPadding = PaddingValues(bottom = 16.dp),
             ) {
                 if (selectedSource == "ALL") {
                     grouped.forEach { (source, items) ->
@@ -116,6 +119,9 @@ fun NewsListScreen(
                     }
                 }
             }
+
+            // AdMob 横幅（加载失败时高度为 0，不留白）
+            BannerAd(adUnitId = AdIds.bannerList)
         }
     }
 }

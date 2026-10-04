@@ -42,6 +42,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.newsflow.app.data.*
+import com.newsflow.app.ads.AdIds
+import com.newsflow.app.ads.BannerAd
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import kotlinx.coroutines.launch
 
@@ -188,7 +190,11 @@ fun PlayerScreen(
                     }
                 },
             )
-        }
+        },
+        bottomBar = {
+            // AdMob 横幅固定在屏幕底部（加载失败时高度为 0，不留白）
+            BannerAd(adUnitId = AdIds.bannerPlayer)
+        },
     ) { padding ->
         Column(
             modifier = Modifier

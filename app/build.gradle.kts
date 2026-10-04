@@ -18,6 +18,23 @@ val keystoreProperties = Properties().apply {
 val hasSigningConfig = keystorePropertiesFile.exists() &&
         keystoreProperties.getProperty("storeFile") != null
 
+// ============================================================================
+// AdMob 配置 —— 换真实 ID 时只改这一块
+// ============================================================================
+// ⚠️ 开发/测试期间必须保持 useTestAds = true。
+//    用真实广告单元做测试 = 无效流量 = AdMob 封号，这是最常见的封号原因。
+//
+// 上线前要做的：
+//   1. AdMob 后台 → 应用 → 添加应用 → 拿到「应用 ID」(格式 ca-app-pub-4841187795675033~1234567890)
+//   2. AdMob 后台 → 广告单元 → 创建「横幅」→ 拿到「广告单元 ID」(格式 ca-app-pub-4841187795675033/1234567890)
+//   3. 把下面 3 个测试 ID 替换成你自己的真实 ID
+//   4. 把 useTestAds 改成 false
+// ============================================================================
+val admobAppId = "ca-app-pub-3940256099942544~3347511713"          // 测试 App ID
+val admobBannerList = "ca-app-pub-3940256099942544/6300978111"     // 测试横幅（新闻列表页）
+val admobBannerPlayer = "ca-app-pub-3940256099942544/6300978111"   // 测试横幅（播放页）
+val useTestAds = true
+
 android {
     namespace = "com.newsflow.app"
     compileSdk = 36
@@ -30,6 +47,13 @@ android {
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // AdMob：App ID 注入到 AndroidManifest 的 meta-data
+        manifestPlaceholders["admobAppId"] = admobAppId
+        // AdMob：广告单元 ID 注入到代码里（BuildConfig）
+        buildConfigField("String", "ADMOB_BANNER_LIST", "\"$admobBannerList\"")
+        buildConfigField("String", "ADMOB_BANNER_PLAYER", "\"$admobBannerPlayer\"")
+        buildConfigField("boolean", "USE_TEST_ADS", "$useTestAds")
     }
 
     signingConfigs {
@@ -72,6 +96,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -109,6 +134,13 @@ dependencies {
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+
+    // AdMob
+    // 注意：25.x / 24.9+ 用 Kotlin 2.1+ 元数据编译，与本项目的 Kotlin 2.0.20 不兼容。
+    // 24.0.0 是最后一个纯 Java 版本，横幅功能完全够用。
+    implementation("com.google.android.gms:play-services-ads:24.0.0")
+    // GDPR/CCPA 同意流程（欧盟/加州用户必须）
+    implementation("com.google.android.ump:user-messaging-platform:3.2.0")
 
     // Testing
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
