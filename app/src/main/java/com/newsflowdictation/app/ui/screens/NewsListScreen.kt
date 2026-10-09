@@ -1,5 +1,6 @@
 package com.newsflowdictation.app.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -155,6 +156,9 @@ private fun SourceHeader(source: String, count: Int) {
 
 @Composable
 private fun NewsCard(news: NewsItem, onClick: () -> Unit) {
+    // 缩略图加载失败时降级显示来源图标，避免出现空白块
+    var thumbFailed by remember(news.thumbnailUrl) { mutableStateOf(false) }
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -167,14 +171,32 @@ private fun NewsCard(news: NewsItem, onClick: () -> Unit) {
             Box(
                 modifier = Modifier
                     .size(width = 120.dp, height = 80.dp)
-                    .clip(RoundedCornerShape(8.dp)),
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(Color(0xFFE3E6EA)),
+                contentAlignment = Alignment.Center,
             ) {
-                AsyncImage(
-                    model = news.thumbnailUrl,
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop,
-                )
+                if (!thumbFailed) {
+                    AsyncImage(
+                        model = news.thumbnailUrl,
+                        contentDescription = null,
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop,
+                        onError = { state ->
+                            android.util.Log.e(
+                                "Thumbnail",
+                                "load failed: ${news.thumbnailUrl} -> ${state.result.throwable}",
+                            )
+                            thumbFailed = true
+                        },
+                    )
+                } else {
+                    Icon(
+                        getSourceIcon(news.source),
+                        contentDescription = null,
+                        modifier = Modifier.size(30.dp),
+                        tint = Color(0xFF9AA0A6),
+                    )
+                }
                 Icon(
                     Icons.Default.PlayCircle,
                     contentDescription = "Play",
