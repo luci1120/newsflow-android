@@ -1,4 +1,4 @@
-package com.newsflow.app.billing
+package com.newsflowdictation.app.billing
 
 /**
  * 订阅商品定义。

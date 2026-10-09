@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NewsFlow English"
+rootProject.name = "Newsflow Dictation"
 include(":app")

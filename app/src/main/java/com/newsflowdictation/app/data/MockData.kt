@@ -1,4 +1,4 @@
-package com.newsflow.app.data
+package com.newsflowdictation.app.data
 
 /**
  * Fallback demo data, used only when no lesson JSON is bundled in

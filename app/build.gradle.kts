@@ -36,11 +36,11 @@ val admobBannerPlayer = "ca-app-pub-3940256099942544/6300978111"   // 测试横�
 val useTestAds = true
 
 android {
-    namespace = "com.newsflow.app"
+    namespace = "com.newsflowdictation.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.newsflow.app"
+        applicationId = "com.newsflowdictation.app"
         minSdk = 29
         targetSdk = 36
         versionCode = 1

@@ -12,7 +12,7 @@
 }
 
 # Keep model classes
--keep class com.newsflow.app.data.** { *; }
+-keep class com.newsflowdictation.app.data.** { *; }
 
 # Retrofit
 -dontwarn retrofit2.**

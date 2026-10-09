@@ -1,4 +1,4 @@
-package com.newsflow.app.ui.screens
+package com.newsflowdictation.app.ui.screens
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -42,9 +42,9 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
-import com.newsflow.app.data.*
-import com.newsflow.app.ads.AdIds
-import com.newsflow.app.ads.BannerAd
+import com.newsflowdictation.app.data.*
+import com.newsflowdictation.app.ads.AdIds
+import com.newsflowdictation.app.ads.BannerAd
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import kotlinx.coroutines.launch
 

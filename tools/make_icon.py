@@ -336,7 +336,7 @@ def write_feature_graphic(path, w=1024, h=500):
     tx = gx + glyph.width + int(W * 0.055)
     max_w = W - tx - int(W * 0.06)
 
-    title = "NewsFlow English"
+    title = "Newsflow Dictation"
     sub = "Learn English with real news videos"
 
     title_font = _fit_font(d, title, max_w, int(H * 0.16), bold=True)

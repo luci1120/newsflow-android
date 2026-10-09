@@ -1,4 +1,4 @@
-package com.newsflow.app.ui
+package com.newsflowdictation.app.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,18 +11,18 @@ import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import com.newsflow.app.ui.screens.NewsListScreen
-import com.newsflow.app.ui.screens.PlayerScreen
-import com.newsflow.app.ui.screens.SettingsScreen
-import com.newsflow.app.ui.screens.UpgradeScreen
-import com.newsflow.app.billing.BillingService
-import com.newsflow.app.billing.PremiumStore
-import com.newsflow.app.data.MockData
-import com.newsflow.app.data.NewsItem
-import com.newsflow.app.data.RemoteLessonService
-import com.newsflow.app.data.SegmentRepository
-import com.newsflow.app.data.SettingsService
-import com.newsflow.app.data.YouTubeService
+import com.newsflowdictation.app.ui.screens.NewsListScreen
+import com.newsflowdictation.app.ui.screens.PlayerScreen
+import com.newsflowdictation.app.ui.screens.SettingsScreen
+import com.newsflowdictation.app.ui.screens.UpgradeScreen
+import com.newsflowdictation.app.billing.BillingService
+import com.newsflowdictation.app.billing.PremiumStore
+import com.newsflowdictation.app.data.MockData
+import com.newsflowdictation.app.data.NewsItem
+import com.newsflowdictation.app.data.RemoteLessonService
+import com.newsflowdictation.app.data.SegmentRepository
+import com.newsflowdictation.app.data.SettingsService
+import com.newsflowdictation.app.data.YouTubeService
 import androidx.compose.ui.platform.LocalContext
 import com.android.billingclient.api.ProductDetails
 

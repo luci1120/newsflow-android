@@ -1,4 +1,4 @@
-package com.newsflow.app.billing
+package com.newsflowdictation.app.billing
 
 import android.app.Activity
 import android.content.Context

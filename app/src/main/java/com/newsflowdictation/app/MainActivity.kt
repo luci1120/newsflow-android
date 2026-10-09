@@ -1,12 +1,12 @@
-package com.newsflow.app
+package com.newsflowdictation.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.newsflow.app.ads.AdsConsent
-import com.newsflow.app.ui.AppRoot
-import com.newsflow.app.ui.theme.NewsFlowTheme
+import com.newsflowdictation.app.ads.AdsConsent
+import com.newsflowdictation.app.ui.AppRoot
+import com.newsflowdictation.app.ui.theme.NewsFlowTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

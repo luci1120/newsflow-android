@@ -1,4 +1,4 @@
-package com.newsflow.app.ui.screens
+package com.newsflowdictation.app.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -21,7 +21,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.android.billingclient.api.ProductDetails
-import com.newsflow.app.billing.PremiumProducts
+import com.newsflowdictation.app.billing.PremiumProducts
 
 /**
  * 付费页（订阅去广告）。

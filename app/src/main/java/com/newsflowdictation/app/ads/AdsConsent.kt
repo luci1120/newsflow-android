@@ -1,4 +1,4 @@
-package com.newsflow.app.ads
+package com.newsflowdictation.app.ads
 
 import android.app.Activity
 import android.util.Log

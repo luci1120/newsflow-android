@@ -1,6 +1,6 @@
-package com.newsflow.app.ads
+package com.newsflowdictation.app.ads
 
-import com.newsflow.app.BuildConfig
+import com.newsflowdictation.app.BuildConfig
 
 /**
  * 广告单元 ID 解析。

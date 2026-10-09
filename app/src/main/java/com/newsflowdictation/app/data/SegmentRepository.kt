@@ -1,4 +1,4 @@
-package com.newsflow.app.data
+package com.newsflowdictation.app.data
 
 import android.content.Context
 import android.util.Log

@@ -1,4 +1,4 @@
-package com.newsflow.app.ui.screens
+package com.newsflowdictation.app.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -18,9 +18,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.newsflow.app.ads.AdIds
-import com.newsflow.app.ads.BannerAd
-import com.newsflow.app.data.NewsItem
+import com.newsflowdictation.app.ads.AdIds
+import com.newsflowdictation.app.ads.BannerAd
+import com.newsflowdictation.app.data.NewsItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -57,7 +57,7 @@ fun NewsListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("NewsFlow English", fontWeight = FontWeight.Bold) },
+                title = { Text("Newsflow Dictation", fontWeight = FontWeight.Bold) },
                 actions = {
                     IconButton(onClick = { }) {
                         Icon(Icons.Default.Refresh, contentDescription = "Refresh")

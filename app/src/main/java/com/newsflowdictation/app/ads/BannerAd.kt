@@ -1,4 +1,4 @@
-package com.newsflow.app.ads
+package com.newsflowdictation.app.ads
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height

@@ -1,4 +1,4 @@
-package com.newsflow.app.data
+package com.newsflowdictation.app.data
 
 import android.util.Log
 import kotlinx.coroutines.Dispatchers

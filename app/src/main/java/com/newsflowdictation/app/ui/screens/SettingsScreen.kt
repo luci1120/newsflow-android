@@ -1,4 +1,4 @@
-package com.newsflow.app.ui.screens
+package com.newsflowdictation.app.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.FlowRow
@@ -14,9 +14,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.newsflow.app.BuildConfig
-import com.newsflow.app.data.AppLanguages
-import com.newsflow.app.data.SettingsService
+import com.newsflowdictation.app.BuildConfig
+import com.newsflowdictation.app.data.AppLanguages
+import com.newsflowdictation.app.data.SettingsService
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 
 @OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)

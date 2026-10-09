@@ -1,7 +1,7 @@
-package com.newsflow.app.data
+package com.newsflowdictation.app.data
 
 /**
- * Data models for NewsFlow English
+ * Data models for Newsflow Dictation
  */
 
 data class NewsItem(

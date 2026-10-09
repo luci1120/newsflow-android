@@ -1,4 +1,4 @@
-# NewsFlow English — Native Android (Kotlin + Jetpack Compose)
+# Newsflow Dictation — Native Android (Kotlin + Jetpack Compose)
 
 Learn English through real US news videos. Watch, listen, repeat, and improve.
 
@@ -69,4 +69,4 @@ newsflow_android/
 ```
 
 ## Package ID
-`com.newsflow.app`
+`com.newsflowdictation.app`
